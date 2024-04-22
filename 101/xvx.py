@@ -4,8 +4,8 @@ import shutil
 file_path_1 = "D:\\repx\\img"
 file_path_2 = "D:\\Logic\\111"
 file_path_3 = "D:\\repx"
-file_1 = "xxx_1.txt"
-file_2 = "xxx_2.txt"
+file_1 = "res\\xxx_1.txt"
+file_2 = "res\\xxx_2.txt"
 
 array_1 = []
 array_2 = []
@@ -70,3 +70,11 @@ for i in range(len(array_1)):
         # папка или файл с нужной подстрокой не найдена ни в одной директории
         with open(file_2, "a", encoding='utf-8') as f:
             f.write(f"Не найдено - {array_1[i]} - {array_2[i]}\n")
+
+# удалить файл_1 и очистить xvx.txt
+if foldername_found and not os.path.exists(file_2):
+    # удалить файл_1 и очистить xvx.txt
+    os.remove(file_1)
+    with open("xvx.txt", "w", encoding='utf-8') as f:
+        pass  # очищаем файл
+#--------------------------------------------------
