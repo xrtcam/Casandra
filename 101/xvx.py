@@ -4,18 +4,17 @@ import shutil
 file_path_1 = "D:\\repx\\img"
 file_path_2 = "D:\\Logic\\111"
 file_path_3 = "D:\\repx"
-file_1 = "res\\xxx_1.txt"
-file_2 = "res\\xxx_2.txt"
+file_1 = "xxx_1.txt"
+file_2 = "xxx_2.txt"
 
 array_1 = []
-with open('xvx_1.txt', 'r', encoding='utf-8') as f:
-    for line in f:
-        array_1.append(line.strip())
-
 array_2 = []
-with open('xvx_2.txt', 'r', encoding='utf-8') as f:
-    for line in f:
-        array_2.append(line.strip())
+
+with open("xvx.txt", "r", encoding='utf-8') as file:
+    for line in file:
+        parts = line.strip().split(" - ")
+        array_1.append(parts[0])
+        array_2.append(parts[1])
 
 for i in range(len(array_1)):
     foldername_found = False
